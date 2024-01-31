@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_application_1/controllers/menubController.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final MenuController menuController = Get.put(MenuController());
+  final MenubController menuController = Get.put(MenubController());
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +44,5 @@ class MyApp extends StatelessWidget {
         }),
       ),
     );
-  }
-}
-class MenuController extends GetxController {
-  var selectedIndex = 0.obs;
-
-  void changeIndex(int index) {
-    selectedIndex.value = index;
   }
 }
